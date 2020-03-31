@@ -17,11 +17,20 @@ namespace CopyingElements
         }
         static void Main(string[] args)
         {
+
+            List<Student> Stu = new List<Student>()
+            {
+                new Student {Id=999,Name="人以虚"},
+                new Student {Id=777,Name="小李子"}
+            };
+
+
+
             List<int> numbers = new List<int>();
             numbers.Add(5);
             numbers.Add(10);
             numbers.Add(20);
-            List<int> firstTwo = CopyAtMost<int>(numbers, 2);
+            List<Student> firstTwo = CopyAtMost<Student>(Stu, 2);
             Console.WriteLine(firstTwo.Count);
         }
     }
