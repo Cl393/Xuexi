@@ -8,6 +8,18 @@ namespace Wrox.ProCSharp.Delegates
     {
         static void Main()
         {
+
+            Func<double, double> func1 = new Func<double, double>(MathOperations.MultiplyByTwo);
+            Func<double, double> func2 = new Func<double, double>(MathOperations.Square);
+            double d1 = 2.2;
+            double d2 = 3.3;
+            double d3 = 0;
+            d3 = func1.Invoke(d1);
+            Console.WriteLine(d3);
+            d3 = func2.Invoke(d2);
+            Console.WriteLine(d3);
+
+
             DoubleOp[] operations =
             {
                 MathOperations.MultiplyByTwo,
