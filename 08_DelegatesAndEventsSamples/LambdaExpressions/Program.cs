@@ -19,11 +19,24 @@ namespace Wrox.ProCSharp.Delegates
             Func<string, string> oneParam = s => $"change uppercase {s.ToUpper()}";
             Console.WriteLine(oneParam("test"));
 
+            //---将字符串变成大写
+            Console.WriteLine(nameof(SimpleDemos));
+            Func<string, string> Towpa = s => $"ko no {s.ToUpper()} da";
+            Console.WriteLine(Towpa("dio"));
+
+            //-------------------
+
             Func<double, double, double> twoParams = (x, y) => x * y;
             Console.WriteLine(twoParams(3, 2));
 
             Func<double, double, double> twoParamsWithTypes = (double x, double y) => x * y;
             Console.WriteLine(twoParamsWithTypes(4, 2));
+
+            //--输出一个值
+            Func<int, int, int> twoTypes = (int a, int b) => a + b;
+            Console.WriteLine(twoTypes(4, 6));
+
+
 
             Func<double, double> operations = x => x * 2;
             operations += x => x * x;
