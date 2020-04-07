@@ -29,5 +29,12 @@ namespace Wrox.ProCSharp.Delegates
                 }
             } while (swapped);
         }
+        public static void Passageway<T>(IList<T> PrintArray, Func<T, string> func)
+        {
+            foreach (var item in PrintArray)
+            {
+                Console.WriteLine(func(item));
+            }
+        }
     }
 }
