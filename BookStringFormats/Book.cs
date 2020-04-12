@@ -40,6 +40,15 @@ namespace BookStringFormats
 
             }
         }
+        public int CompareTo(Book other)
+        {
+            int compare = BookName?.CompareTo(other?.BookName) ?? -1;  
+            if (compare == 0)
+            {
+                return Author?.CompareTo(other?.Author) ?? -1;     
+            }
+            return compare;
+        }
     }
 }
 
