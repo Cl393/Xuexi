@@ -103,11 +103,11 @@ namespace BookStringFormats
             {
                 Console.WriteLine(books[i]);
             }
-            Book book = books.Find(r => r.Author == "荒木老贼");
+            Book book = books.Find(r => r.Author == "荒木小号");
 
-            int zsIndex = books.FindIndex(r => r.Author == "荒木老贼");
+            int zsIndex = books.FindIndex(r => r.Author == "荒木小号");
 
-            List<Book> zsAll = books.FindAll(r => r.Author == "荒木老贼");
+            List<Book> zsAll = books.FindAll(r => r.Author == "荒木小号");
             //Exists检索
             if (books.Exists(r => r.BookName == "迪亚波罗"))
             {
