@@ -33,7 +33,15 @@ namespace LinqQueryKeywords
                 select num;
 
             // Execute the query
-            foreach (var s in queryLowNums3)
+            //foreach (var s in queryLowNums3)
+            //{
+            //    Console.Write(s.ToString() + " ");
+            //}
+
+
+            //查询
+            var queryLowNums4 = numbers.Where(n => n < 5 && n % 2 == 0);
+            foreach (var s in queryLowNums4)
             {
                 Console.Write(s.ToString() + " ");
             }
