@@ -9,6 +9,7 @@ namespace LinqPrimer
     {
         public static void LinqSample()
         {
+
             //1.数据源
             string[] names = { "Tom", "Dick", "Harry" };
 
@@ -35,7 +36,16 @@ namespace LinqPrimer
 
             //用两种方式写查询，显示包含字母a的名字
 
+            IEnumerable<string> filteredNames5 = from n in names //n范围变量
+                                                 where n.Contains("a") //
+                                                 select n;  //返回元素
 
+
+            foreach (string n in filteredNames5)
+                Console.WriteLine(n);
+            IEnumerable<string> filteredNames6 = names.Where(n => n.Contains("a"));
+            foreach (string n in filteredNames6)
+                Console.WriteLine(n);
         }
 
         ///查询从这个集合中查出所有包含字母“a”的元素，

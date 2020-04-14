@@ -19,7 +19,14 @@ namespace LinqQueryKeywords
                           select num;
 
             // Execute the query.
-            foreach (int i in lowNums)
+            //foreach (int i in lowNums)
+            //{
+            //    Console.Write(i + " ");
+            //}
+            Console.WriteLine("//////////////////");
+
+            IEnumerable<int> a = numbers.Where(n => n < 5);
+            foreach (int i in a)
             {
                 Console.Write(i + " ");
             }

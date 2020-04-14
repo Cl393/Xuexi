@@ -11,9 +11,13 @@ namespace ExtensionMethodsS
             Console.WriteLine("Perth".IsCapitalized());
             //静态方法调用//StaticClass.Method(arg0, arg1, arg2, ...); 
             Console.WriteLine(ExtensionClass.IsCapitalized("Perth"));
-           
             "Seattle".First();
             ExtensionInterface.First("Seattle");
+
+            Console.WriteLine("Pasd".GetStar(5));
+            
         }
+
+
     }
 }
