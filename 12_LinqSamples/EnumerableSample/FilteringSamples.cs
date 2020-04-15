@@ -63,6 +63,7 @@ namespace EnumerableSample
 
         public static void FilteringWithIndex()
         {
+            //注释
             var racers = Formula1.GetChampions()
                 .Where((r, index) => r.LastName.StartsWith("A") && index % 2 != 0);
             foreach (var r in racers)
