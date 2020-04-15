@@ -41,8 +41,18 @@ namespace EnumerableSample
 
         public static void Filtering()
         {
+            //var racers = from r in Formula1.GetChampions()
+            //             where r.Wins > 15 && (r.Country == "Brazil" || r.Country == "Austria")
+            //             select r;
+
+            //foreach (var r in racers)
+            //{
+            //    Console.WriteLine($"{r:A}");
+            //}
+
+
             var racers = from r in Formula1.GetChampions()
-                         where r.Wins > 15 && (r.Country == "Brazil" || r.Country == "Austria")
+                         where r.Wins > 15 && (r.Country == "Finland" || r.Country == "UK")
                          select r;
 
             foreach (var r in racers)

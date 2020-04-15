@@ -33,12 +33,22 @@ namespace EnumerableSample
 
         public static void CompoundFrom()
         {
+            //var ferrariDrivers = from r in Formula1.GetChampions()
+            //                     from c in r.Cars
+            //                     where c == "Ferrari"
+            //                     orderby r.LastName
+            //                     select $"{r.FirstName} {r.LastName}";
+
+            //foreach (var racer in ferrariDrivers)
+            //{
+            //    Console.WriteLine(racer);
+            //}
+
             var ferrariDrivers = from r in Formula1.GetChampions()
                                  from c in r.Cars
-                                 where c == "Ferrari"
+                                 where c == "Lotus"
                                  orderby r.LastName
                                  select $"{r.FirstName} {r.LastName}";
-
             foreach (var racer in ferrariDrivers)
             {
                 Console.WriteLine(racer);
