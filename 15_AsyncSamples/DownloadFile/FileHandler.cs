@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace DownloadFile
 {
@@ -11,7 +13,7 @@ namespace DownloadFile
         /// <summary>
         /// 文件下载目录
         /// </summary>
-        private static string _directory = @"D:\2020SE\";
+        private static string _directory = @"F:\临时\";
 
         /// <summary>
         /// 下载文件
@@ -37,6 +39,29 @@ namespace DownloadFile
             Random rnd = new Random();
             fileName = DateTime.Now.ToString("yyyyMMddHHmmssfff") + rnd.Next(10, 99).ToString() + fileExt;
             return fileName;
+        }
+
+        public static async Task TaksDownloadFile(string url)
+        {
+
+            Task task = Task.Run(() => Thread.Sleep(2000));
+            Console.WriteLine("task Status {0}", task.Status);
+            try
+            {
+                task.Wait();
+                using (WebClient client = new WebClient())
+                {
+                    string fileName = CreateFileName(url);
+                    client.DownloadFile(url, _directory + fileName);
+                }
+                Console.WriteLine("task Status {0}", task.Status);//结束
+            }
+            catch (AggregateException) 
+            {
+                Console.WriteLine("Exception in task");
+            }
+
+
         }
 
     }
