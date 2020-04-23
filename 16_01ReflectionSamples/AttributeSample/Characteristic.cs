@@ -5,7 +5,7 @@ using System.Text;
 namespace AttributeSample
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
-  public  class Characteristic:Attribute
+    public class Characteristic : Attribute
     {
         public string Title { get; set; }
         public int Number { get; set; }
@@ -20,5 +20,6 @@ namespace AttributeSample
             Title = title;
 
 
+        }
     }
 }
