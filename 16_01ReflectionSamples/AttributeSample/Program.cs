@@ -15,7 +15,7 @@ namespace AttributeSample
             Characteristic text = (Characteristic)Fan.GetCustomAttribute(typeof(Characteristic), true);
 
             ConstructorInfo[] ciArray = ty.GetConstructors(); //获取类的所有构造函数
-            foreach (var item in text.Title)//所有属性
+            foreach (var item in text.Title)
             {
                 Console.WriteLine(text.Title);
                 Console.WriteLine("OK");

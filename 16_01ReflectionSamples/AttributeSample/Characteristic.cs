@@ -9,7 +9,6 @@ namespace AttributeSample
     {
         public string Title { get; set; }
         public int Number { get; set; }
-        // 有两个必选参数
         public Characteristic(string title, int number)
         {
             Title = title;
