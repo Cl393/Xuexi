@@ -10,7 +10,7 @@ namespace AttributeSample
         static void Main(string[] args)
         {
 
-            Type ty=typeof(AttributeUsageClass);
+            Type ty=typeof(MyAttributeUsageClass);
             var Fan = ty.GetMethod("Print");
             Characteristic text = (Characteristic)Fan.GetCustomAttribute(typeof(Characteristic), true);
 
