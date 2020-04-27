@@ -1,0 +1,4 @@
+﻿Name   ;Sex
+Dio  ;1
+lili;2
+dudu;1
